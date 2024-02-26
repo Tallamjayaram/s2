@@ -1,3 +1,9 @@
-"# Supplychain" 
-"# s1" 
-"# s2" 
+title: S
+emoji: 🌍
+colorFrom: gray
+colorTo: blue
+sdk: streamlit
+sdk_version: 1.31.1
+app_file: app.py
+pinned: false
+license: mit
