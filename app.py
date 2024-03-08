@@ -250,7 +250,7 @@ def home():
         print("Form Data:", request.form)
         input_submitted = True
         print(url_input)
-        cls_model = AutoModelForSequenceClassification.from_pretrained("/home/ramu143/mysite/riskclassification_finetuned_xlnet_model_ld")
+        cls_model = AutoModelForSequenceClassification.from_pretrained("riskclassification_finetuned_xlnet_model_ld")
         tokenizer_cls = AutoTokenizer.from_pretrained("xlnet-base-cased")
         label_encoder_path = "/home/ramu143/mysite/riskclassification_finetuned_xlnet_model_ld/encoder_labels.pkl"
         label_encoder = LabelEncoder()
