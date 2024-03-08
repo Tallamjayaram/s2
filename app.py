@@ -27,7 +27,7 @@ chat_history = []
 def insert_question_and_answer(question, answer,timestamp):
     try:
         # Connect to the MySQL database
-        connection = mysql.connector.connect('/home/ramu143/mysite/db.sql')
+        connection = mysql.connector.connect('db.sql')
         cursor = connection.cursor()
 
         # SQL query to insert a new record into the 'supplychain' table
@@ -51,7 +51,7 @@ def insert_question_and_answer(question, answer,timestamp):
 def retrieve_article_content(timestamp):
     try:
         # Connect to the MySQL database
-        connection = mysql.connector.connect('/home/ramu143/mysite/db.sql')
+        connection = mysql.connector.connect('db.sql')
         cursor = connection.cursor()
 
         # SQL query to retrieve article content based on the question
@@ -252,7 +252,7 @@ def home():
         print(url_input)
         cls_model = AutoModelForSequenceClassification.from_pretrained("riskclassification_finetuned_xlnet_model_ld")
         tokenizer_cls = AutoTokenizer.from_pretrained("xlnet-base-cased")
-        label_encoder_path = "/home/ramu143/mysite/riskclassification_finetuned_xlnet_model_ld/encoder_labels.pkl"
+        label_encoder_path = "riskclassification_finetuned_xlnet_model_ld/encoder_labels.pkl"
         label_encoder = LabelEncoder()
 
         # Assuming 'label_column values' is the column you want to encode
